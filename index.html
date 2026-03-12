@@ -1384,7 +1384,7 @@
             <article class="stat-card" role="listitem">
               <div class="stat-image">
                 <img
-                  src="./img/icon-3.jpg"
+                  src="./img/quality.jpg.jpg"
                   alt="Ключевые направления поставок"
                   loading="lazy"
                   decoding="async"
@@ -1399,7 +1399,7 @@
             <article class="stat-card" role="listitem">
               <div class="stat-image">
                 <img
-                  src="./img/icon-b2b.jpg"
+                  src="./img/reliability.jpg.jpg"
                   alt="Фокус на B2B клиентах"
                   loading="lazy"
                   decoding="async"
@@ -1489,7 +1489,7 @@
             <div class="timeline-item" role="listitem">
               <div class="timeline-icon">
                 <img
-                  src="./img/reliability.jpg.jpg"
+                  src="./img/icon-b2b.jpg"
                   alt="Фокус на B2B-сегменте"
                   loading="lazy"
                   decoding="async"
@@ -1506,8 +1506,8 @@
             <div class="timeline-item" role="listitem">
               <div class="timeline-icon">
                 <img
-                  src="./img/aproved.jpg.jpg"
-                  alt="Быстрый отклик на заявки"
+                  src="./img/icon-3.jpg"
+                  alt="Основные направления поставок"
                   loading="lazy"
                   decoding="async"
                   width="108"
@@ -1515,15 +1515,15 @@
                 />
               </div>
               <div>
-                <h4>Быстрый отклик на заявки</h4>
-                <p>Максимально быстро реагируем на обращения и работаем с клиентами как очно, так и в удалённом формате.</p>
+                <h4>Основные направления поставок</h4>
+                <p>Основные направления поставок включают три ключа успеха- бензин, дизельное топливо и керосин, предназначенные для решения корпоративных задач, обеспечения транспортных нужд и регулярной поставки топлива потребителям.</p>
               </div>
             </div>
 
             <div class="timeline-item" role="listitem">
               <div class="timeline-icon">
                 <img
-                  src="./img/quality.jpg.jpg"
+                  src="./img/icon-247.jpg"
                   alt="Удобство для клиентов"
                   loading="lazy"
                   decoding="async"
@@ -1690,14 +1690,17 @@
             <h3>Контактная информация</h3>
             <p>Оставьте заявку удобным для вас способом — мы оперативно вернёмся с ответом и обсудим формат сотрудничества.</p>
 
-            <!-- Замените REPLACE_WITH_YOUR_FORM_ID на ваш Formspree form_id -->
             <form
               class="contact-form"
               id="contactForm"
-              action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID"
+              action="https://formspree.io/f/xbdzydjv"
               method="POST"
               novalidate
             >
+              <input type="hidden" name="_subject" value="Новая заявка с сайта Викар-Ойл">
+              <input type="hidden" name="_language" value="ru">
+              <input type="text" name="_gotcha" style="display:none">
+
               <div class="form-grid">
                 <div class="form-group">
                   <label class="form-label" for="name">Имя *</label>
@@ -1951,12 +1954,6 @@
           return;
         }
 
-        if (this.form.action.includes('REPLACE_WITH_YOUR_FORM_ID')) {
-          this.formStatus.textContent = 'Сначала замените REPLACE_WITH_YOUR_FORM_ID на ваш Formspree form_id.';
-          this.formStatus.classList.add('error');
-          return;
-        }
-
         const originalText = this.submitBtn.textContent;
         this.submitBtn.classList.add('btn-loading');
         this.submitBtn.disabled = true;
@@ -1981,7 +1978,7 @@
               if (field.errorElement) field.errorElement.textContent = '';
             });
           } else {
-            this.formStatus.textContent = 'Не удалось отправить форму. Проверьте Formspree form_id или попробуйте позже.';
+            this.formStatus.textContent = 'Не удалось отправить форму. Проверьте настройки Formspree или попробуйте позже.';
             this.formStatus.classList.add('error');
           }
         } catch (error) {
